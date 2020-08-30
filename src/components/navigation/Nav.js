@@ -16,7 +16,7 @@ export default function Nav() {
                     <a className="nav-link-button" href="/"><h3>Home</h3></a>
                     <a className="nav-link-button" href="/"><h3>Menu</h3></a>
                     <a className="nav-link-button" href="/"><h3>Contact</h3></a>
-                    <a className="nav-link-button" id="nav-link-highlight" href="/"><h3>Sign-Up</h3></a>
+                    <a className="nav-link-button" href="/"><h3>Sign-Up</h3></a>
                 </div>
 			</div>
 		</header>
