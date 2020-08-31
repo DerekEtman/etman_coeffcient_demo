@@ -12,6 +12,17 @@ h5 h4 h3 h2 h1 p {
 	--background-main: #cde4b0;
 }
 
+.splash-container{
+  width:100%;
+  height: auto;
+}
+
+.splash-wrapper{
+  display: flex;
+  flex-flow: column wrap;
+  width:80%;
+  margin: 0 auto;
+}
 
 .nav-container {
 	width: 100%;
