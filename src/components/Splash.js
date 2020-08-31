@@ -1,7 +1,18 @@
 import React from "react";
-import pastaImg from "../images/Pasta1.png"
+import pastaImg from "../images/Pasta1.png";
 
 export default function Splash() {
+	window.addEventListener(
+		"scroll",
+		() => {
+			document.body.style.setProperty(
+				"--scroll",
+				window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+			);
+		},
+		false
+	);
+
 	return (
 		<div className="splash-container">
 			<div className="splash-wrapper">
@@ -23,14 +34,30 @@ export default function Splash() {
 					<button className="splash-cta-button"> ENJOY DINNER ON US!</button>
 				</div>
 
-                <div className="splash-image-wrapper">
-                    <img src={pastaImg} alt="A bowl of spaghetti pasta with sauteed cherry tomatoes, parmesian, and basil" className="splash-image"></img>
-                </div>
+				<div className="splash-image-wrapper">
+					<img
+						src={pastaImg}
+						alt="A bowl of spaghetti pasta with sauteed cherry tomatoes, parmesian, and basil"
+						className="splash-image"
+					></img>
+				</div>
 			</div>
 
-            <section className="splash-instruction-first">
-                <h1>First Instruction panel</h1>
-            </section>
+			<div className="splash-keep-scrolling">
+				<h2>Keep Scrolling!</h2>
+			</div>
+
+			<section className="splash-instruction-container splash-card-first">
+				<h1>First Instruction panel</h1>
+			</section>
+
+			<section className="splash-instruction-container splash-card-second">
+				<h1>Second Instruction panel</h1>
+			</section>
+
+			<section className="splash-instruction-container splash-card-third">
+				<h1>Second Instruction panel</h1>
+			</section>
 		</div>
 	);
 }

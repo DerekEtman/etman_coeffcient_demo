@@ -1,6 +1,8 @@
 /* || Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 
+/* || Animation */
+@import "./Animation.css";
 
 
 h5 h4 h3 h2 h1 p button{
@@ -11,8 +13,10 @@ h5 h4 h3 h2 h1 p button{
 :root {
 	--font-color: #393939;
 	--font-color-hover: #797979;
+  --background-main: #cde4b0;
+  
 
-	--background-main: #cde4b0;
+
 }
 
 /* || Nav and Header */
@@ -68,10 +72,17 @@ h5 h4 h3 h2 h1 p button{
   margin: 0 auto;
 }
 
+.splash-header{
+  font-weight: 700;
+}
+
 .splash-text-body{
   display: flex;
   flex-flow: column wrap;
   max-width: 50%;
+  margin-bottom: 10px;
+
+  
 }
 
 .splash-cta-button{
@@ -84,17 +95,52 @@ h5 h4 h3 h2 h1 p button{
   width:100%;
   max-width: 400px;
   margin: 0 auto;
+
+  /* animation: swing-out-right-bck 2s ; */
+
+  animation:rotate .5s ;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+}
+
+
+.splash-keep-scrolling{
+  display: flex;
+}
+
+.splash-keep-scrolling h2{
+  margin:0 auto;
 }
 
 
 
-/* || First Instruction Card */
+/* || Instruction Cards */
 
+.splash-instruction-container{
+  height:80vh;
+  min-height: 50vh;
+}
 
-.splash-instruction-first{
-
+/*  First Card */
+.splash-card-first{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--background-main);
+  background-image: url("./images/Spaget.png");
+  background-attachment: fixed;
 }
 
 
 
-/* || Second Instruction Card */
+/* Second Card */
+
+.splash-card-second{
+  background-color: aliceblue;
+}
+
+
+/* Third Card */
+
+.splash-card-third{
+  background: greenyellow;
+}
