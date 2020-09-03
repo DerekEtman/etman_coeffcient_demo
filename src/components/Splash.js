@@ -16,7 +16,7 @@ export default function Splash() {
 	return (
 		<div className="splash-container">
 			<div className="splash-wrapper">
-				<div className="splash-text-body">
+				<div className="splash-text-wrapper">
 					<h1 className="splash-header">
 						Delicious Meals for you and your furry friends to enjoy!
 					</h1>
