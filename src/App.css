@@ -1,14 +1,14 @@
-/* || Fonts */
+/************************************** || Fonts *******************************/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 
-/* || Animation */
+/************************************** || Animation *******************************/
 @import "./Animation.css";
 
 h5 h4 h3 h2 h1 p button li {
 	font-family: var(--font-family-main);
 }
 
-/* || General Styles */
+/************************************** || General Styles *******************************/
 :root {
 	--font-color: #393939;
 	--background-main: #cde4b0;
@@ -20,7 +20,7 @@ h5 h4 h3 h2 h1 p button li {
 	--mobile-view: 500px;
 }
 
-/* || Nav and Header */
+/************************************** || Nav and Header *******************************/
 .nav-container {
 	width: 100%;
 	display: flex;
@@ -105,8 +105,7 @@ h5 h4 h3 h2 h1 p button li {
 	height: 3px;
 	margin-bottom: 5px;
 	position: relative;
-
-	background-color: white;
+	background-color: black;
 	border-radius: 3px;
 
 	z-index: 1;
@@ -115,6 +114,8 @@ h5 h4 h3 h2 h1 p button li {
 
 	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
 		background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+
+
 }
 
 #navMenuToggle span:first-child {
@@ -175,7 +176,7 @@ h5 h4 h3 h2 h1 p button li {
 	transform: none;
 }
 
-/* || Splash Page */
+/************************************** || Splash Page *******************************/
 
 .splash-container {
 	width: 100%;
@@ -206,6 +207,7 @@ h5 h4 h3 h2 h1 p button li {
 	animation: scoot-right 0.5s;
 	animation-play-state: paused;
 	animation-delay: calc(var(--scroll) * -1s);
+	overflow: hidden;
 }
 
 .splash-cta-button {
@@ -247,7 +249,7 @@ h5 h4 h3 h2 h1 p button li {
 	margin: 0 auto;
 }
 
-/* || Instruction Cards */
+/************************************** || Instruction Cards *******************************/
 
 .splash-instruction-container {
 	height: 100vh;
@@ -291,7 +293,7 @@ h5 h4 h3 h2 h1 p button li {
 	white-space: normal;
 }
 
-/*  First Card */
+/************************************** First Card *******************************/
 .splash-card-first-container {
 	background-position: center;
 	background-repeat: no-repeat;
@@ -337,19 +339,20 @@ h5 h4 h3 h2 h1 p button li {
 	animation-delay: calc(var(--scroll) * -1s);
 }
 
-/* Second Card */
+/************************************** Second Card *******************************/
 
 .splash-card-second {
 	background-color: #bd7f7f;
 }
 
-/* Third Card */
+/************************************** Third Card *******************************/
 
 .splash-card-third {
 	background: #ae3636;
+	z-index: 2;
 }
 
-/* || Scroll Snapping */
+/************************************** || Scroll Snapping *******************************/
 
 .y.mandatory-scroll-snapping {
 	scroll-snap-type: block mandatory;
@@ -362,14 +365,14 @@ h5 h4 h3 h2 h1 p button li {
 	scroll-margin: 1rem;
 }
 
-/* || MEDIA QUERY */
+/************************************** || MEDIA QUERY *******************************/
 @media only screen and (max-width: 1024px) {
 	.splash-text-wrapper {
 		position: fixed;
 		width: 90%;
 		max-width: 100%;
 		background-color: rgba(255, 255, 255, 0.74);
-		padding: 1rem 1.5rem;
+		padding: 7rem 1.5rem;
 	}
 	.splash-image-wrapper {
 		z-index: -1;
@@ -383,11 +386,6 @@ h5 h4 h3 h2 h1 p button li {
 	}
 	#navMenuToggle {
 		animation: none;
-	}
-	#navMenuToggle span {
-		background-color: black;
-
-		transition: black-to-white 1s;
 	}
 	.splash-card-one-image {
 		top: 0;
@@ -417,7 +415,10 @@ h5 h4 h3 h2 h1 p button li {
 	#navMobileMenu {
 		right: 30px;
 	}
-
+	.splash-text-wrapper{
+		margin: 0 auto;
+		padding: 1.5rem;
+	}
 	.splash-card-one-image {
 		top: 0;
 		left: 150px;

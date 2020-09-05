@@ -2,13 +2,6 @@ import React from "react";
 import logo from "../../images/LogoWithDogWithPicture.png";
 
 export default function Nav() {
-	function openNav() {
-		document.getElementById("myNav").style.width = "100%";
-	  }
-	  
-	  function closeNav() {
-		document.getElementById("myNav").style.width = "0%";
-	  }
 
 	return (
 		<header className="nav-container">

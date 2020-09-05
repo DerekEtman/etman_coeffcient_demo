@@ -118,9 +118,9 @@
 
 @keyframes black-to-white {
 	from {
-		color: black;
+		background-color: black;
 	}
 	to {
-		color: white;
+		background-color: white;
 	}
 }
