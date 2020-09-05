@@ -15,13 +15,15 @@ h5 h4 h3 h2 h1 p button li {
 	--font-color-hover: tomato;
 
 	--font-family-main: "Montserrat", sans-serif;
+
+	--tablet-view: 1024px;
+	--mobile-view: 500px;
 }
 
 /* || Nav and Header */
 .nav-container {
 	width: 100%;
 	display: flex;
-	/* overflow: hidden; */
 }
 
 .nav-wrapper {
@@ -30,7 +32,8 @@ h5 h4 h3 h2 h1 p button li {
 	align-items: center;
 	flex-flow: row wrap;
 	width: 80%;
-	margin: 20px auto;
+	margin: 1rem auto;
+	margin-bottom: 0;
 }
 
 .nav-link-wrapper {
@@ -62,16 +65,21 @@ h5 h4 h3 h2 h1 p button li {
 
 	-webkit-user-select: none;
 	user-select: none;
+
+	animation: fade-in 0.3s;
+	animation-play-state: paused;
+	animation-delay: calc(var(--scroll) * -1s);
 }
 
 #navMenuToggle a {
 	text-decoration: none;
 	color: var(--font-color);
+	color: white;
 
 	transition: color 0.3s ease;
 }
 
-#navMenuToggle a:hover  {
+#navMenuToggle a:hover {
 	color: var(--font-color-hover);
 }
 
@@ -98,7 +106,7 @@ h5 h4 h3 h2 h1 p button li {
 	margin-bottom: 5px;
 	position: relative;
 
-	background-color: var(--font-color);
+	background-color: white;
 	border-radius: 3px;
 
 	z-index: 1;
@@ -133,16 +141,26 @@ h5 h4 h3 h2 h1 p button li {
 
 #navMobileMenu {
 	position: fixed;
-	top: 60px;
-	right: 0;
+	margin: 0 auto;
+	height: fit-content;
+	top: 0;
+	right: 120px;
 	bottom: 0;
-	left: 85%;
+	left: 0;
 	z-index: 0;
+	background-color: #cde4b0b9;
+	padding-top: 95px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+
+	border-bottom-right-radius: 5px;
 
 	list-style-type: none;
 	-webkit-font-smoothing: antialiased;
+	text-align: right;
+
 	transform-origin: 0% 0%;
-	transform: translate(0, -100%);
+	transform: translate(0, -150%);
 
 	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
@@ -161,7 +179,8 @@ h5 h4 h3 h2 h1 p button li {
 
 .splash-container {
 	width: 100%;
-	height: auto;
+	height: 100%;
+	overflow: hidden;
 }
 
 .splash-wrapper {
@@ -171,6 +190,7 @@ h5 h4 h3 h2 h1 p button li {
 	justify-content: space-evenly;
 	width: 80%;
 	margin: 0 auto;
+	margin-bottom: 2rem;
 }
 
 .splash-header {
@@ -196,10 +216,10 @@ h5 h4 h3 h2 h1 p button li {
 	border: none;
 }
 
-.splash-cta-button:hover{
-	background-color:var(--font-color-hover);
-	color:white;
-	transform: scale(1.04,1.04) ;
+.splash-cta-button:hover {
+	background-color: var(--font-color-hover);
+	color: white;
+	transform: scale(1.04, 1.04);
 	transition: transform 0.1s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
@@ -214,10 +234,13 @@ h5 h4 h3 h2 h1 p button li {
 }
 
 .splash-keep-scrolling {
-	display: flex;
-	animation: text-blur-out 0.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	animation: text-blur-out 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 	animation-play-state: paused;
 	animation-delay: calc(var(--scroll) * -1s);
+	position: fixed;
+	z-index: -1;
+	left: 50%;
+	bottom: 5%;
 }
 
 .splash-keep-scrolling h2 {
@@ -229,25 +252,180 @@ h5 h4 h3 h2 h1 p button li {
 .splash-instruction-container {
 	height: 100vh;
 	min-height: 50vh;
+	display: flex;
+	flex-flow: column wrap;
+}
+
+.splash-instruction-wrapper {
+	margin: 1rem auto;
+	padding: 1rem 1rem;
+	display: flex;
+	flex-flow: column wrap;
+}
+.splash-instruction-header {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	float: left;
+	font-family: Montserrat, sans-serif;
+	color: #fff;
+	font-size: 5rem;
+	text-align: center;
+}
+
+.splash-instruction-text {
+	overflow: visible;
+	height: fit-content;
+	width: 35%;
+	margin-top: 4px;
+	margin-right: auto;
+	margin-left: auto;
+	float: left;
+	direction: ltr;
+	font-family: Montserrat, sans-serif;
+	color: #fff;
+	font-size: 25px;
+	line-height: 50px;
+	font-weight: 600;
+	text-align: left;
+	text-transform: none;
+	white-space: normal;
 }
 
 /*  First Card */
-.splash-card-first {
+.splash-card-first-container {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-color: var(--background-main);
-	background-image: url("./images/Spaget.png");
+	/* background-image: url("./images/Spaget.png"); */
 	background-attachment: fixed;
+	position: relative;
+	overflow: hidden;
+}
+
+#card-one-header {
+	width: fit-content;
+	text-align: center;
+	align-self: center;
+	animation: scoot-in-down 0.3s;
+	animation-play-state: paused;
+	animation-delay: calc(var(--scroll) * -1s);
+}
+
+#card-one-text-wrapper {
+	animation: scoot-in-down 0.3s;
+	animation-play-state: paused;
+	animation-delay: calc(var(--scroll) * -1s);
+}
+
+.splash-instruction-text-wrapper {
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+	z-index: 0;
+}
+
+.splash-card-one-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto;
+
+	animation: scoot-in-left 0.3s;
+	animation-play-state: paused;
+	animation-delay: calc(var(--scroll) * -1s);
 }
 
 /* Second Card */
 
 .splash-card-second {
-	background-color: aliceblue;
+	background-color: #bd7f7f;
 }
 
 /* Third Card */
 
 .splash-card-third {
-	background: greenyellow;
+	background: #ae3636;
+}
+
+/* || Scroll Snapping */
+
+.y.mandatory-scroll-snapping {
+	scroll-snap-type: block mandatory;
+}
+
+.container > div {
+	text-align: center;
+	scroll-snap-align: center;
+	flex: none;
+	scroll-margin: 1rem;
+}
+
+/* || MEDIA QUERY */
+@media only screen and (max-width: 1024px) {
+	.splash-text-wrapper {
+		position: fixed;
+		width: 90%;
+		max-width: 100%;
+		background-color: rgba(255, 255, 255, 0.74);
+		padding: 1rem 1.5rem;
+	}
+	.splash-image-wrapper {
+		z-index: -1;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+
+	.nav-link-wrapper {
+		display: none;
+	}
+	#navMenuToggle {
+		animation: none;
+	}
+	#navMenuToggle span {
+		background-color: black;
+
+		transition: black-to-white 1s;
+	}
+	.splash-card-one-image {
+		top: 0;
+		left: 300px;
+		right: 0;
+		bottom: 0;
+	}
+	.splash-instruction-container {
+		height: 100vh;
+	}
+	.splash-instruction-text-wrapper {
+		margin: 0 auto;
+	}
+	.splash-instruction-text {
+		width: 80%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.nav-wrapper {
+		width: 95%;
+	}
+	.nav-mobile-wrapper {
+		top: 60px;
+		right: 10px !important;
+	}
+	#navMobileMenu {
+		right: 30px;
+	}
+
+	.splash-card-one-image {
+		top: 0;
+		left: 150px;
+		right: 0;
+		bottom: 0;
+	}
+	.splash-instruction-text {
+		width: 90%;
+		text-align: center;
+	}
 }

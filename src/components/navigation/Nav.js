@@ -19,7 +19,7 @@ export default function Nav() {
 					</a>
 				</div>
 
-				{/* <div className="nav-link-wrapper" id="nav-link-wrapper">
+				<div className="nav-link-wrapper" id="nav-link-wrapper">
 					<a className="nav-link-button" href="/">
 						<h3>Home</h3>
 					</a>
@@ -32,7 +32,7 @@ export default function Nav() {
 					<a className="nav-link-button" href="/">
 						<h3>Sign-Up</h3>
 					</a>
-				</div> */}
+				</div>
 
 				<div className="nav-mobile-wrapper" id="navMenuToggle">
 					<input type="checkbox" />

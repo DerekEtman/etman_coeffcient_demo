@@ -1,5 +1,6 @@
 import React from "react";
 import pastaImg from "../images/Pasta1.png";
+import spaget from "../images/Spaget.png";
 
 export default function Splash() {
 	window.addEventListener(
@@ -15,7 +16,7 @@ export default function Splash() {
 
 	return (
 		<div className="splash-container">
-			<div className="splash-wrapper">
+			<section className="splash-wrapper container y mandatory-scroll-snapping">
 				<div className="splash-text-wrapper">
 					<h1 className="splash-header">
 						Delicious Meals for you and your furry friends to enjoy!
@@ -41,22 +42,54 @@ export default function Splash() {
 						className="splash-image"
 					></img>
 				</div>
-			</div>
 
-			<div className="splash-keep-scrolling">
-				<h2>Keep Scrolling!</h2>
-			</div>
-
-			<section className="splash-instruction-container splash-card-first">
-				<h1>First Instruction panel</h1>
+				<div className="splash-keep-scrolling">
+					<h2>Keep Scrolling!</h2>
+				</div>
 			</section>
 
-			<section className="splash-instruction-container splash-card-second">
-				<h1>Second Instruction panel</h1>
+			<section className="splash-instruction-container splash-card-first-container container  y mandatory-scroll-snapping">
+				<div className="splash-instruction-wrapper">
+					<h1 className="splash-instruction-header" id="card-one-header">
+						1. FIND AND CLICK!
+					</h1>
+					<img
+						src={spaget}
+						alt="A bowl of Spaghetti"
+						className="splash-card-one-image"
+					/>
+					<div className="splash-instruction-text-wrapper" id="card-one-text-wrapper">
+						<h4 className="splash-instruction-text" >
+							With so many options on our menu, It may be hard to decide!
+						</h4>
+						<h4 className="splash-instruction-text">
+							Simply choose many meal kits along with the number of eaters and we'll
+							ship fresh ingredients in the right proportions directly to your door.
+						</h4>
+					</div>
+				</div>
 			</section>
 
-			<section className="splash-instruction-container splash-card-third">
-				<h1>Second Instruction panel</h1>
+			<section className="splash-instruction-container splash-card-second container  y mandatory-scroll-snapping">
+				<div className="splash-instruction-wrapper">
+					<h1 className="splash-instruction-header">2. HAVE FUN AND COOK</h1>
+					<h4 className="splash-instruction-text">
+						Follow along with our step-by-step instructions and enjoy cooking with
+						everyone's best friend, your dog. Our chefs have curated recipes to blow
+						you and your k-9 companion's mind
+					</h4>
+				</div>
+			</section>
+
+			<section className="splash-instruction-container splash-card-third container  y mandatory-scroll-snapping">
+				<div className="splash-instruction-wrapper">
+					<h1 className="splash-instruction-header">3. ENJOY</h1>
+					<h4 className="splash-instruction-text">
+						You can rest assured knowing you both can enjoy nutritious meals.‍Meals
+						have been crafted to avoid pet dangerous food. Optional additions are
+						labeled for human consumption only.
+					</h4>
+				</div>
 			</section>
 		</div>
 	);

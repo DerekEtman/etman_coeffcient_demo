@@ -1,11 +1,31 @@
 @keyframes scoot-left {
 	to {
 		transform: translateX(200%);
+		opacity: 0;
 	}
 }
 
 @keyframes scoot-right {
 	to {
+		transform: translateX(-200%);
+		opacity: 0;
+	}
+}
+
+@keyframes scoot-down {
+	to {
+		transform: translateY(-200%);
+	}
+}
+
+@keyframes scoot-in-down {
+	from {
+		transform: translateY(-400%);
+	}
+}
+
+@keyframes scoot-in-left {
+	from {
 		transform: translateX(-200%);
 	}
 }
@@ -30,6 +50,23 @@
 	}
 	100% {
 		opacity: 0;
+	}
+}
+
+@-webkit-keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }
 
@@ -76,5 +113,14 @@
 	100% {
 		-webkit-filter: blur(12px) opacity(0%);
 		filter: blur(12px) opacity(0%);
+	}
+}
+
+@keyframes black-to-white {
+	from {
+		color: black;
+	}
+	to {
+		color: white;
 	}
 }
