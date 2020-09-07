@@ -1,6 +1,10 @@
 import React from "react";
 import pastaImg from "../images/Pasta1.png";
 import spaget from "../images/Spaget.png";
+import dogLogo from "../images/DogheadIconColoredWhite2.png";
+import dog_foreground from "../images/dog_table_foreground.png";
+import dog_midground from "../images/dog_table_midground.png";
+import dog_background from "../images/dog_table_background.png";
 
 export default function Splash() {
 	window.addEventListener(
@@ -47,7 +51,6 @@ export default function Splash() {
 					<h2>Keep Scrolling!</h2>
 				</div>
 			</section>
-
 			<section className="splash-instruction-container splash-card-first-container container  y mandatory-scroll-snapping">
 				<div className="splash-instruction-wrapper">
 					<h1 className="splash-instruction-header" id="card-one-header">
@@ -58,8 +61,11 @@ export default function Splash() {
 						alt="A bowl of Spaghetti"
 						className="splash-card-one-image"
 					/>
-					<div className="splash-instruction-text-wrapper" id="card-one-text-wrapper">
-						<h4 className="splash-instruction-text" >
+					<div
+						className="splash-instruction-text-wrapper"
+						id="card-one-text-wrapper"
+					>
+						<h4 className="splash-instruction-text">
 							With so many options on our menu, It may be hard to decide!
 						</h4>
 						<h4 className="splash-instruction-text">
@@ -69,8 +75,7 @@ export default function Splash() {
 					</div>
 				</div>
 			</section>
-
-			<section className="splash-instruction-container splash-card-second container  y mandatory-scroll-snapping">
+			<section className="splash-instruction-container splash-card-second thumb container  y mandatory-scroll-snapping">
 				<div className="splash-instruction-wrapper">
 					<h1 className="splash-instruction-header">2. HAVE FUN AND COOK</h1>
 					<h4 className="splash-instruction-text">
@@ -79,16 +84,40 @@ export default function Splash() {
 						you and your k-9 companion's mind
 					</h4>
 				</div>
+				<div className="splash_instruction_parallax">
+					<div
+						className="splash-dog-foreground bg"
+						alt="a content dog sitting in owner's lap"
+					></div>
+					<div
+						className="splash-dog-midground bg"
+						alt="Picnic table with dinner items"
+					></div>
+					<div
+						className="splash-dog-background bg"
+						alt="lush dark green back drop"
+					></div>
+				</div>
 			</section>
-
 			<section className="splash-instruction-container splash-card-third container  y mandatory-scroll-snapping">
 				<div className="splash-instruction-wrapper">
 					<h1 className="splash-instruction-header">3. ENJOY</h1>
-					<h4 className="splash-instruction-text">
-						You can rest assured knowing you both can enjoy nutritious meals.‍Meals
-						have been crafted to avoid pet dangerous food. Optional additions are
-						labeled for human consumption only.
-					</h4>
+					<div
+						className="splash-instruction-text-wrapper"
+						id="card-three-text-wrapper"
+					>
+						<img
+							src={dogLogo}
+							alt="Logo of Pawsta- The head of a Labrador with a drawn curly mustache and chef's hat"
+							style={{ width: "25%" }}
+							id="splash-card-three-image"
+						/>
+						<h4 className="splash-instruction-text" id="splash-card-three-text">
+							You can rest assured knowing you both can enjoy nutritious meals.‍Meals
+							have been crafted to avoid pet dangerous food. Optional additions are
+							labeled for human consumption only.
+						</h4>
+					</div>
 				</div>
 			</section>
 		</div>
