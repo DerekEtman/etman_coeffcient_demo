@@ -1,10 +1,7 @@
 import React from "react";
+import dogLogo from "../images/DogheadIconColoredWhite2.png";
 import pastaImg from "../images/Pasta1.png";
 import spaget from "../images/Spaget.png";
-import dogLogo from "../images/DogheadIconColoredWhite2.png";
-import dog_foreground from "../images/dog_table_foreground.png";
-import dog_midground from "../images/dog_table_midground.png";
-import dog_background from "../images/dog_table_background.png";
 
 export default function Splash() {
 	window.addEventListener(
