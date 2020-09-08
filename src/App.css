@@ -62,9 +62,10 @@ h5 h4 h3 h2 h1 p button li {
 	right: 120px;
 	background-color:rgba(255, 255, 255, 0.281);
 	padding:.5rem;
+	padding-bottom: .2rem;
 	border-radius: 5px;
 
-	z-index: 1;
+	z-index: 999;
 
 	-webkit-user-select: none;
 	user-select: none;
@@ -198,6 +199,7 @@ h5 h4 h3 h2 h1 p button li {
 
 .splash-header {
 	font-weight: 700;
+	font-size: 40px;
 }
 
 .splash-text-wrapper {
@@ -294,32 +296,42 @@ h5 h4 h3 h2 h1 p button li {
 	text-align: left;
 	text-transform: none;
 	white-space: normal;
+	text-shadow: 2px 0px 15px rgb(48, 48, 48);
+
 }
 
 /************************************** First Card *******************************/
 .splash-card-first-container {
 	background-position: center;
+	z-index: 4;
 	background-repeat: no-repeat;
 	background-color: var(--background-main);
 	/* background-image: url("./images/Spaget.png"); */
 	background-attachment: fixed;
 	position: relative;
 	overflow: hidden;
+
 }
 
 #card-one-header {
 	width: fit-content;
 	text-align: center;
 	align-self: center;
-	animation: scoot-in-down 0.3s;
+
+	animation: scoot-in-down 0.35s;
+	animation-play-state: paused;
+	animation-delay: calc(var(--scroll) * -1s);
+	text-shadow: 2px 0px 15px rgba(150, 150, 150, 0.59);
+}
+
+#card-one-text-wrapper {
+	animation: scoot-in-down 0.35s;
 	animation-play-state: paused;
 	animation-delay: calc(var(--scroll) * -1s);
 }
 
-#card-one-text-wrapper {
-	animation: scoot-in-down 0.3s;
-	animation-play-state: paused;
-	animation-delay: calc(var(--scroll) * -1s);
+.card-one-text{
+	text-shadow: 2px 0px 15px rgba(150, 150, 150, 0.59);
 }
 
 .splash-instruction-text-wrapper {
@@ -329,6 +341,7 @@ h5 h4 h3 h2 h1 p button li {
 	z-index: 0;
 }
 
+
 .splash-card-one-image {
 	position: absolute;
 	top: 0;
@@ -337,7 +350,7 @@ h5 h4 h3 h2 h1 p button li {
 	bottom: 0;
 	margin: 0 auto;
 
-	animation: scoot-in-left 0.3s;
+	animation: scoot-in-left 0.4s;
 	animation-play-state: paused;
 	animation-delay: calc(var(--scroll) * -1s);
 }
@@ -346,6 +359,12 @@ h5 h4 h3 h2 h1 p button li {
 
 .splash-card-second {
 	background-color: #bd7f7f;
+
+}
+
+.card-two-info-wrapper{
+	z-index: 4;
+	
 }
 
 .thumb {
@@ -367,21 +386,31 @@ h5 h4 h3 h2 h1 p button li {
 .thumb .splash-dog-foreground {
 	background: url(./images/dog_table_foreground.png) center no-repeat;
 	background-size: cover;
+	z-index: 3;
+	height: 115vh;
 }
 
 .thumb .splash-dog-midground {
 	background: url(./images/dog_table_midground.png) center no-repeat;
 	background-size: cover;
+	z-index: 2;
+	height: 110vh;
 }
 .thumb .splash-dog-background {
 	background: url(./images/dog_table_background.png) center no-repeat;
 	background-size: cover;
+	z-index: 1;
 }
 
 /************************************** Third Card *******************************/
 
 .splash-card-third {
 	background: #ae3636;
+	position: absolute;
+	z-index: 5;
+	/* background: url("./images/pasta-making.jpg") center no-repeat;
+	background-size:cover; */
+	text-shadow: 2px 0px 15px rgba(150, 150, 150, 0.59);
 }
 #card-three-text-wrapper {
 	flex-direction: row;
@@ -389,11 +418,15 @@ h5 h4 h3 h2 h1 p button li {
 #splash-card-three-image {
 	width: 25%;
 	margin: 0 auto;
+
+	animation: wobble-hor-bottom 2.8s infinite both;
 }
 #splash-card-three-text {
 	padding: 0;
 	margin: auto;
+	text-shadow: 2px 0px 15px rgba(150, 150, 150, 0.59);
 }
+
 /************************************** || Scroll Snapping *******************************/
 
 .y.mandatory-scroll-snapping {

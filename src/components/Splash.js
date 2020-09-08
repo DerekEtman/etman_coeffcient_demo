@@ -4,6 +4,17 @@ import pastaImg from "../images/Pasta1.png";
 import spaget from "../images/Spaget.png";
 
 export default function Splash() {
+	function parallax(element, distance, speed) {
+		const item = document.querySelector(element);
+		item.style.transform = `translateY(${distance * speed}px)`;
+	}
+	window.addEventListener("scroll", () => {
+		// parallax(".thumb", window.scrollY, 1);
+		parallax(".splash-dog-foreground", window.scrollY - 1050, -0.13);
+		parallax(".splash-dog-midground", window.scrollY - 1500, -0.08);
+		parallax(".splash-dog-background", window.scrollY - 1300, -0.01);
+	});
+
 	window.addEventListener(
 		"scroll",
 		() => {
@@ -62,10 +73,10 @@ export default function Splash() {
 						className="splash-instruction-text-wrapper"
 						id="card-one-text-wrapper"
 					>
-						<h4 className="splash-instruction-text">
+						<h4 className="splash-instruction-text card-one-text">
 							With so many options on our menu, It may be hard to decide!
 						</h4>
-						<h4 className="splash-instruction-text">
+						<h4 className="splash-instruction-text card-one-text">
 							Simply choose many meal kits along with the number of eaters and we'll
 							ship fresh ingredients in the right proportions directly to your door.
 						</h4>
@@ -73,12 +84,12 @@ export default function Splash() {
 				</div>
 			</section>
 			<section className="splash-instruction-container splash-card-second thumb container  y mandatory-scroll-snapping">
-				<div className="splash-instruction-wrapper">
+				<div className="splash-instruction-wrapper card-two-info-wrapper">
 					<h1 className="splash-instruction-header">2. HAVE FUN AND COOK</h1>
 					<h4 className="splash-instruction-text">
 						Follow along with our step-by-step instructions and enjoy cooking with
 						everyone's best friend, your dog. Our chefs have curated recipes to blow
-						you and your k-9 companion's mind
+						you and your k-9 companion's mind!
 					</h4>
 				</div>
 				<div className="splash_instruction_parallax">
